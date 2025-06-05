@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -39,9 +40,9 @@ public class Player : MonoBehaviour
         input.y = Input.GetAxisRaw("Vertical");
         velocity = input.normalized * moveSpeed;
 
-        if(input.sqrMagnitude > 0.01f)
+        if (input.sqrMagnitude > 0.01f)
         {
-            if(Math.Abs(input.x) > Math.Abs(input.y))
+            if (Math.Abs(input.x) > Math.Abs(input.y))
             {
                 if (input.x > 0)
                     sR.sprite = spriteRight;
@@ -72,6 +73,11 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+    }
+
+    void OnMove(InputValue value)
+    {
+        input = value.Get<Vector2>();
     }
 
 }
