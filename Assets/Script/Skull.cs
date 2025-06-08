@@ -37,4 +37,9 @@ public class Skull : MonoBehaviour
 
         sr.flipX = target.position.x < rb.position.x;
     }
+
+    private void OnEnable()
+    {
+        target = GameManager.instance.player.GetComponent<Rigidbody2D>();
+    }
 }
