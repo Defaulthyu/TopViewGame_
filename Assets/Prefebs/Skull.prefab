@@ -185,6 +185,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  health: 0
+  maxHealth: 0
+  animCon:
+  - {fileID: 9100000, guid: 0c6c551c8affc04479de696fa14b01ea, type: 2}
+  - {fileID: 9100000, guid: 0c6c551c8affc04479de696fa14b01ea, type: 2}
   target: {fileID: 0}
 --- !u!114 &8440420422785204069
 MonoBehaviour:
