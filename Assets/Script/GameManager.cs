@@ -27,4 +27,11 @@ public class GameManager : MonoBehaviour
         }
 
     }
+
+    public void GetExp()
+    {
+        //exp++;
+
+
+    }
 }

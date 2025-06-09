@@ -22,19 +22,19 @@ public class HUD : MonoBehaviour
         switch (type)
         {
             case InfoType.Exp:
-                //myText.text = GameManager.instance.player.exp.ToString();
+                //float curExp = GameManager.instance.exp;
                 break;
             case InfoType.Level:
-                //myText.text = GameManager.instance.player.level.ToString();
+
                 break;
             case InfoType.Kill:
-                //myText.text = GameManager.instance.player.killCount.ToString();
+                
                 break;
             case InfoType.Time:
-                //myText.text = GameManager.instance.playTime.ToString("F2");
+               
                 break;
             case InfoType.Health:
-                //mySlider.value = GameManager.instance.player.health / GameManager.instance.player.maxHealth;
+
                 break;
         }
     }
