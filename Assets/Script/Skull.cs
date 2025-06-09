@@ -57,4 +57,29 @@ public class Skull : MonoBehaviour
         maxHealth = data.health;
         health = data.health;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(!collision.CompareTag("Bullet"))
+        {
+            return;
+        }
+
+        health -= collision.GetComponent<Bullet>().damage;
+
+        if(health > 0)
+        {
+            //살아있으니 맞는 액션
+        }
+        else
+        {
+            //죽었으니 죽는 액션
+            Dead();
+        }
+    }
+
+    void Dead()
+    {
+        gameObject.SetActive(false);
+    }
 }
