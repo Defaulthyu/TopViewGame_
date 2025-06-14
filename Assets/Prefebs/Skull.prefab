@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6752242258631507082}
   - component: {fileID: 2410363821746627661}
   - component: {fileID: 8440420422785204069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Skull
   m_TagString: Enemy
   m_Icon: {fileID: 0}
