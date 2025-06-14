@@ -13,20 +13,24 @@ public class Skull : MonoBehaviour
     bool isLive = true;
 
     Rigidbody2D rb;
+    Collider2D coll;
     Animator anim;
     SpriteRenderer sr;
+    WaitForFixedUpdate wait;
 
     // Start is called before the first frame update
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        wait = new WaitForFixedUpdate();
     }
 
     void FixedUpdate()
     {
-        if(!isLive)
+        if(!isLive || anim.GetCurrentAnimatorStateInfo(0).IsName("Hit"))
             return;
 
         Vector2 dirVec = target.position - rb.position;
@@ -47,6 +51,10 @@ public class Skull : MonoBehaviour
     {
         target = GameManager.instance.player.GetComponent<Rigidbody2D>();
         isLive = true;
+        coll.enabled = true;
+        rb.simulated = true;
+        sr.sortingOrder = 2;
+        anim.SetBool("Dead", false);
         health = maxHealth;
     }
 
@@ -60,22 +68,38 @@ public class Skull : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!collision.CompareTag("Bullet"))
+        if(!collision.CompareTag("Bullet") || !isLive)
         {
             return;
         }
 
         health -= collision.GetComponent<Bullet>().damage;
+        StartCoroutine(KnockBack());
 
-        if(health > 0)
+
+        if (health > 0)
         {
-            //살아있으니 맞는 액션
+            anim.SetTrigger("Hit");
         }
         else
         {
-            //죽었으니 죽는 액션
-            Dead();
+            isLive = false;
+            coll.enabled = false;
+            rb.simulated = false;
+            sr.sortingOrder = 1;
+            anim.SetBool("Dead", true);
+            GameManager.instance.kill++;
+            GameManager.instance.GetExp();
         }
+    }
+
+    IEnumerator KnockBack()
+    {
+        yield return wait;  //다음 1프레임 쉬기
+        Vector3 playerPos = GameManager.instance.player.transform.position;
+        Vector3 dirVec = transform.position - playerPos;
+        rb.AddForce(dirVec.normalized * 0.7f, ForceMode2D.Impulse);
+
     }
 
     void Dead()
