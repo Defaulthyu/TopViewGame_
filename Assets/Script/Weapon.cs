@@ -15,12 +15,7 @@ public class Weapon : MonoBehaviour
 
     void Awake()
     {
-        player = GetComponentInParent<Player_>();
-    }
-    private void Start()
-    {
-        //초기화
-        Init();
+        player = GameManager.instance.player;
     }
 
     void Update()
@@ -56,10 +51,30 @@ public class Weapon : MonoBehaviour
         //레벨업시 초기화
         if(id == 0)
             Batch();
+
+        player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver); //무기 장착시 플레이어에게 알림
     }
 
-    public void Init()
+    public void Init(ItemData data)
     {
+        //Basic Set
+        name = "Weapon " + data.itemId;
+        transform.parent = player.transform;
+        transform.localPosition = Vector3.zero;
+
+        //Property Set
+        id = data.itemId;
+        damage = data.baseDamage;
+        count = data.baseCount;
+
+        for(int index = 0; index < GameManager.instance.pool. prefabs.Length; index++)
+        {
+            if (data.projectile == GameManager.instance.pool.prefabs[index])
+            {
+                prefabId = index;
+                break;
+            }
+        }
         switch (id)
         {
             case 0: //삽
@@ -71,6 +86,8 @@ public class Weapon : MonoBehaviour
                 speed = 0.3f;
                 break;
         }
+
+        player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver); //무기 장착시 플레이어에게 알림
     }
 
     void Batch()
