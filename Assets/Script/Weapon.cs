@@ -36,8 +36,8 @@ public class Weapon : MonoBehaviour
                 }
                 break;
         }
-
-        if(Input.GetKeyDown(KeyCode.Space))
+        //test code
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             //·¹º§¾÷
             LevelUp(10, 3);
@@ -80,6 +80,10 @@ public class Weapon : MonoBehaviour
             case 0: //»ð
                 speed = 150;
                 Batch();
+                break;
+
+            case 1: //ÃÑ
+                speed = 2f; //ÃÑ¾Ë ¹ß»ç ¼Óµµ
                 break;
 
             default:
