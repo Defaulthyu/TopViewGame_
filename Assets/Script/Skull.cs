@@ -102,8 +102,20 @@ public class Skull : MonoBehaviour
 
     }
 
+    [SerializeField] GameObject goldPrefab;
+
     void Dead()
     {
+
+
+
+        float dropChance = 0.1f; // 50% È®·ü·Î °ñµå µå¶ø
+        if(Random.value < dropChance)
+        {
+            Instantiate(goldPrefab, transform.position, Quaternion.identity);
+
+
+        }
         gameObject.SetActive(false);
     }
 }
