@@ -48,11 +48,11 @@ public class Gear : MonoBehaviour
             switch(weapon.id)
             {
                 case 0:
-                    weapon.speed = 130 * (1f + rate);
+                    weapon.speed = 130 * rate;
                     break;
 
                 case 1:
-                    weapon.speed = 2f * (1f - rate);
+                    weapon.speed = 2f / rate;
                     break;
 
                 default:

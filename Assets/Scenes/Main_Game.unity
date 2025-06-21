@@ -910,6 +910,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1379404677}
+        m_TargetAssemblyTypeName: LevelUp, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &190455255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -964,7 +976,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &265156039
 Transform:
   m_ObjectHideFlags: 0
@@ -1009,25 +1021,36 @@ MonoBehaviour:
   spawnPoints: []
   spawnData:
   - prefabId: 0
-    spawnTime: 1.5
+    spawnTime: 0.5
     spriteType: 0
     health: 50
     speed: 0.5
   - prefabId: 0
-    spawnTime: 2
+    spawnTime: 0.5
     spriteType: 1
     health: 50
-    speed: 0.4
+    speed: 0.2
   - prefabId: 0
-    spawnTime: 1
+    spawnTime: 0.4
     spriteType: 0
     health: 70
     speed: 0.5
+  - prefabId: 0
+    spawnTime: 0.3
+    spriteType: 0
+    health: 100
+    speed: 0.5
+  - prefabId: 2
+    spawnTime: 0.2
+    spriteType: 1
+    health: 200
+    speed: 0.4
   - prefabId: 2
     spawnTime: 0.3
     spriteType: 0
     health: 300
     speed: 0.3
+  levelTime: 0
 --- !u!1 &316360140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,6 +1157,18 @@ MonoBehaviour:
       - m_Target: {fileID: 316360142}
         m_TargetAssemblyTypeName: Item, Assembly-CSharp
         m_MethodName: OnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1379404677}
+        m_TargetAssemblyTypeName: LevelUp, Assembly-CSharp
+        m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1589,7 +1624,7 @@ MonoBehaviour:
   level: 0
   kill: 0
   exp: 0
-  nextExp: 0100000002000000030000000400000005000000060000000700000008000000090000000a000000
+  nextExp: 03000000050000000a00000014000000280000003c000000500000006400000096000000c80000002c01000090010000f40100008a02000084030000
   pool: {fileID: 820849369}
   player: {fileID: 2067231350}
   uiLevelUp: {fileID: 1379404677}
@@ -11663,6 +11698,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1140863066}
         m_TargetAssemblyTypeName: Item, Assembly-CSharp
         m_MethodName: OnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1379404677}
+        m_TargetAssemblyTypeName: LevelUp, Assembly-CSharp
+        m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22117,6 +22164,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1379404677}
+        m_TargetAssemblyTypeName: LevelUp, Assembly-CSharp
+        m_MethodName: Hide
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1859942683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22398,6 +22457,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1965895076}
         m_TargetAssemblyTypeName: Item, Assembly-CSharp
         m_MethodName: OnClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1379404677}
+        m_TargetAssemblyTypeName: LevelUp, Assembly-CSharp
+        m_MethodName: Hide
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
