@@ -16,7 +16,7 @@ public class Gear : MonoBehaviour
 
         //Property Set
         type = data.itemType;
-        rate = data.damages[0];
+        rate = 1.0f;
         ApplyGear();
     }
 
@@ -48,11 +48,11 @@ public class Gear : MonoBehaviour
             switch(weapon.id)
             {
                 case 0:
-                    weapon.speed = 150 + (150 * rate);
+                    weapon.speed = 130 * (1f + rate);
                     break;
 
                 case 1:
-                    weapon.speed = 2f - (2.5f * rate);
+                    weapon.speed = 2f * (1f - rate);
                     break;
 
                 default:
@@ -64,8 +64,8 @@ public class Gear : MonoBehaviour
 
     void SpeedUp()
     {
-        float speed = 3;
-        GameManager.instance.player.moveSpeed = speed + speed * rate;
+        float baseSpeed = 1.3f;
+        GameManager.instance.player.moveSpeed = baseSpeed * rate;
     }
 
 }

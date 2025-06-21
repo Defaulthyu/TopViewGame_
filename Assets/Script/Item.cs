@@ -55,22 +55,20 @@ public class Item : MonoBehaviour
         {
             case ItemData.ItemType.Melee:
             case ItemData.ItemType.Range:
-                if(level == 0)
+                if (level == 0)
                 {
                     GameObject newWeapon = new GameObject();
                     weapon = newWeapon.AddComponent<Weapon>();
-                    weapon.Init(data);  
+                    weapon.Init(data);
                 }
                 else
                 {
-                    float nextDamage = data.baseDamage;
-                    int nextCount = 0;
+                    float deltaDamage = weapon.damage * data.damages[level]; // 누적 비율
+                    int nextCount = data.counts[level];
 
-                    nextDamage += data.baseDamage * data.damages[level];
-                    nextCount += data.counts[level];
-
-                    weapon.LevelUp(nextDamage, nextCount);
+                    weapon.LevelUp(deltaDamage, nextCount);
                 }
+
                 level++;
                 break;
             case ItemData.ItemType.Glove:
@@ -80,16 +78,21 @@ public class Item : MonoBehaviour
                     GameObject newGear = new GameObject();
                     gear = newGear.AddComponent<Gear>();
                     gear.Init(data);
+                    level++;
+                    gear.LevelUp(gear.rate * (1 + data.damages[0])); // 초기 레벨업
                 }
                 else
                 {
-                    float nextRate = data.damages[level];
-                    gear.LevelUp(nextRate);
+                    //float deltaRate = gear.rate * data.damages[level];
+                    //gear.LevelUp(gear.rate * (1 + data.damages[level]));
+                    gear.rate *= (1 + data.damages[level]);
+                    gear.LevelUp(gear.rate);
+                    level++;
                 }
-                level++;
+
                 break;
             case ItemData.ItemType.Heal:
-                GameManager.instance.health += 30;
+                GameManager.instance.health = Mathf.Min(GameManager.instance.health + 30, GameManager.instance.maxHealth);
                 break;
         }
 

@@ -113,9 +113,6 @@ public class Skull : MonoBehaviour
 
     void Dead()
     {
-
-
-
         float dropChance = 0.1f; // 50% È®·ü·Î °ñµå µå¶ø
         if(Random.value < dropChance)
         {

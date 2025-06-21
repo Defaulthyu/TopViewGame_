@@ -7,6 +7,7 @@ public class Spawner : MonoBehaviour
     public Transform[] spawnPoints;
     public SpawnData[] spawnData;
 
+
     int level;
 
     float timer;
@@ -17,9 +18,6 @@ public class Spawner : MonoBehaviour
     }
     void Update()
     {
-        if (!GameManager.instance.isLive)
-            return;
-
         timer += Time.deltaTime;
         level = Mathf.Min(Mathf.FloorToInt(GameManager.instance.gameTime / 10f), spawnData.Length - 1);
 
@@ -33,15 +31,18 @@ public class Spawner : MonoBehaviour
 
     void Spawn()
     {
-        GameObject enemy = GameManager.instance.pool.Get(0);
+        GameObject enemy = GameManager.instance.pool.Get(spawnData[level].prefabId);
         enemy.transform.position = spawnPoints[Random.Range(1, spawnPoints.Length)].position;
         enemy.GetComponent<Skull>().Init(spawnData[level]);
+        Debug.Log("SpawnData prefabId: " + spawnData[level].prefabId);
+
     }
 }
 
 [System.Serializable]
 public class SpawnData
 {
+    public int prefabId;
     public float spawnTime;
     public int spriteType;
     public int health;

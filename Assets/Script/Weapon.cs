@@ -81,7 +81,7 @@ public class Weapon : MonoBehaviour
         switch (id)
         {
             case 0: //»ð
-                speed = 150;
+                speed = 130;
                 Batch();
                 break;
 

@@ -10,16 +10,17 @@ public class GameManager : MonoBehaviour
     public float gameTime;
     public float maxGameTime = 2 * 10f;
     [Header("# Game Info")]
-    public int health;
-    public int maxHealth = 100;
+    public float health;
+    public float maxHealth = 100;
     public int level;
     public int kill;
     public int exp;
-    public int[] nextExp = { 3, 5, 10, 100, 150, 210, 280, 360, 450, 600 };
+    public int[] nextExp = { 3, 10, 20, 30, 40, 50, 70, 110, 150, 200, 250, 350, 500 };
     [Header("# GameObject")]
     public PoolManager pool;
     public Player_ player;
     public LevelUp uiLevelUp;
+    public GameObject uiResult;
 
     void Awake()
     {
@@ -32,6 +33,21 @@ public class GameManager : MonoBehaviour
 
         //임시 스크립트
         uiLevelUp.Select(0);
+    }
+
+    public void GameOver()
+    {
+        StartCoroutine(GameOverRoutine()); //게임 오버 루틴 시작
+    }
+
+    IEnumerator GameOverRoutine()
+    {
+        isLive = false; //게임 정지 상태로 변경
+
+        yield return new WaitForSeconds(1.5f);
+        Stop(); //게임 정지
+        uiResult.SetActive(true); //게임 오버 UI 활성화
+
     }
 
     void Update()

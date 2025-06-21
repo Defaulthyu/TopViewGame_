@@ -43,4 +43,19 @@ public class Player_ : MonoBehaviour
             sp.flipX = inputVec.x < 0;
         }
     }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if(!GameManager.instance.isLive)
+            return;
+
+        GameManager.instance.health -= Time.deltaTime * 10f;
+
+        if(GameManager.instance.health < 0)
+        {
+            rb.velocity = Vector2.zero; //플레이어 정지
+            anim.SetTrigger("Dead");
+            GameManager.instance.GameOver(); //게임 오버 처리
+        }
+    }
 }
