@@ -79,5 +79,5 @@ public class SpawnData
     public int health;
     public float speed;
 
-    public int exp;
+    public float exp;
 }

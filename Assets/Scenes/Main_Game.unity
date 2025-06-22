@@ -1022,96 +1022,219 @@ MonoBehaviour:
   spawnPoints: []
   levelSpawnDataList:
   - spawnDatas:
-    - prefabId: 3
-      spawnTime: 0.5
+    - prefabId: 0
+      spawnTime: 0.7
       spriteType: 0
-      health: 30
-      speed: 1
-      exp: 10
+      health: 40
+      speed: 0.8
+      exp: 1
+  - spawnDatas:
     - prefabId: 1
-      spawnTime: 1
+      spawnTime: 0.7
       spriteType: 0
       health: 50
-      speed: 0.7
-      exp: 10
+      speed: 0.6
+      exp: 1
   - spawnDatas:
     - prefabId: 0
-      spawnTime: 1
+      spawnTime: 0.8
       spriteType: 0
-      health: 70
-      speed: 0.3
-      exp: 0
+      health: 120
+      speed: 0.5
+      exp: 1
+    - prefabId: 1
+      spawnTime: 0.7
+      spriteType: 0
+      health: 110
+      speed: 0.6
+      exp: 1
+  - spawnDatas:
     - prefabId: 0
-      spawnTime: 1.2
+      spawnTime: 0.7
       spriteType: 0
-      health: 60
-      speed: 0.2
-      exp: 0
+      health: 200
+      speed: 0.5
+      exp: 1
+    - prefabId: 1
+      spawnTime: 0.75
+      spriteType: 0
+      health: 180
+      speed: 0.7
+      exp: 1
+    - prefabId: 2
+      spawnTime: 1.5
+      spriteType: 0
+      health: 150
+      speed: 0.7
+      exp: 1.1
+  - spawnDatas:
+    - prefabId: 0
+      spawnTime: 0.35
+      spriteType: 0
+      health: 250
+      speed: 0.5
+      exp: 1
+    - prefabId: 1
+      spawnTime: 0.45
+      spriteType: 0
+      health: 180
+      speed: 0.6
+      exp: 1
+    - prefabId: 2
+      spawnTime: 1.5
+      spriteType: 0
+      health: 160
+      speed: 0.7
+      exp: 1
   - spawnDatas:
     - prefabId: 0
       spawnTime: 0.3
       spriteType: 0
-      health: 150
-      speed: 1
-      exp: 0
-    - prefabId: 0
-      spawnTime: 0.5
+      health: 220
+      speed: 0.5
+      exp: 1
+    - prefabId: 1
+      spawnTime: 0.4
       spriteType: 0
-      health: 100
-      speed: 0.7
-      exp: 0
+      health: 205
+      speed: 0.6
+      exp: 1
+    - prefabId: 2
+      spawnTime: 1.4
+      spriteType: 0
+      health: 195
+      speed: 0.73
+      exp: 1
   - spawnDatas:
     - prefabId: 0
-      spawnTime: 0.2
+      spawnTime: 0.5
       spriteType: 0
       health: 300
-      speed: 1
-      exp: 0
+      speed: 0.5
+      exp: 1
+    - prefabId: 1
+      spawnTime: 0.6
+      spriteType: 0
+      health: 250
+      speed: 0.6
+      exp: 1
+    - prefabId: 2
+      spawnTime: 1.4
+      spriteType: 0
+      health: 250
+      speed: 0.75
+      exp: 1
+    - prefabId: 3
+      spawnTime: 3
+      spriteType: 0
+      health: 500
+      speed: 0.3
+      exp: 3
+  - spawnDatas:
     - prefabId: 0
       spawnTime: 0.5
       spriteType: 0
+      health: 350
+      speed: 0.5
+      exp: 1
+    - prefabId: 1
+      spawnTime: 0.6
+      spriteType: 0
+      health: 325
+      speed: 0.6
+      exp: 1
+    - prefabId: 2
+      spawnTime: 1.45
+      spriteType: 0
+      health: 300
+      speed: 0.75
+      exp: 1.1
+    - prefabId: 3
+      spawnTime: 2
+      spriteType: 0
+      health: 600
+      speed: 0.4
+      exp: 4
+    - prefabId: 4
+      spawnTime: 2.5
+      spriteType: 0
+      health: 550
+      speed: 0.5
+      exp: 3
+  - spawnDatas:
+    - prefabId: 0
+      spawnTime: 0.45
+      spriteType: 0
+      health: 250
+      speed: 0.5
+      exp: 1
+    - prefabId: 1
+      spawnTime: 0.5
+      spriteType: 0
+      health: 225
+      speed: 0.6
+      exp: 1
+    - prefabId: 2
+      spawnTime: 1.35
+      spriteType: 0
       health: 200
-      speed: 0.7
-      exp: 0
-  - spawnDatas:
-    - prefabId: 2
-      spawnTime: 0.4
+      speed: 0.8
+      exp: 1.1
+    - prefabId: 3
+      spawnTime: 2
       spriteType: 0
-      health: 500
-      speed: 0.7
-      exp: 0
-    - prefabId: 2
-      spawnTime: 0.5
+      health: 800
+      speed: 0.4
+      exp: 3
+    - prefabId: 4
+      spawnTime: 1.6
+      spriteType: 0
+      health: 650
+      speed: 0.5
+      exp: 3
+    - prefabId: 5
+      spawnTime: 1.9
+      spriteType: 0
+      health: 650
+      speed: 0.6
+      exp: 3
+  - spawnDatas:
+    - prefabId: 0
+      spawnTime: 0.35
+      spriteType: 0
+      health: 450
+      speed: 0.5
+      exp: 1
+    - prefabId: 1
+      spawnTime: 0.45
       spriteType: 0
       health: 350
-      speed: 0.5
-      exp: 0
-  - spawnDatas:
+      speed: 0.8
+      exp: 1
     - prefabId: 2
-      spawnTime: 0.4
+      spawnTime: 1.1
       spriteType: 0
-      health: 500
-      speed: 0.7
-      exp: 0
-    - prefabId: 2
-      spawnTime: 0.5
-      spriteType: 0
-      health: 350
-      speed: 0.5
-      exp: 0
-  - spawnDatas:
-    - prefabId: 2
-      spawnTime: 0.5
+      health: 250
+      speed: 0.9
+      exp: 1.1
+    - prefabId: 3
+      spawnTime: 1.5
       spriteType: 0
       health: 1000
       speed: 0.5
-      exp: 0
-    - prefabId: 2
-      spawnTime: 1
+      exp: 3
+    - prefabId: 4
+      spawnTime: 1.4
+      spriteType: 0
+      health: 900
+      speed: 0.6
+      exp: 3
+    - prefabId: 5
+      spawnTime: 2
       spriteType: 0
       health: 850
-      speed: 0.4
-      exp: 0
+      speed: 0.8
+      exp: 3
   levelTime: 0
 --- !u!1 &316360140
 GameObject:
@@ -1686,7 +1809,7 @@ MonoBehaviour:
   level: 0
   kill: 0
   exp: 0
-  nextExp: 03000000050000000a0000000a0000000a00000014000000140000001400000032000000320000003200000064000000
+  nextExp: 03000000050000000a00000014000000140000001400000014000000190000001900000019000000320000003200000032000000320000004b0000004b0000004b0000004b000000640000006400000064000000c8000000
   pool: {fileID: 820849369}
   player: {fileID: 2067231350}
   uiLevelUp: {fileID: 1379404677}
@@ -6686,8 +6809,10 @@ MonoBehaviour:
   prefabs:
   - {fileID: 4912807745633266085, guid: bf7e76a4c3232944faccb2dcaa36c72f, type: 3}
   - {fileID: 6923867791708691285, guid: 44fa6dcb46c9a484ba17ff45ec5e9532, type: 3}
-  - {fileID: 4912807745633266085, guid: 536a722a6623e9f4e8bc394c13d9d9d9, type: 3}
   - {fileID: 2411872748631596104, guid: e72ef0e4d9dbf2b46aabcd1a1f683a13, type: 3}
+  - {fileID: 4912807745633266085, guid: 536a722a6623e9f4e8bc394c13d9d9d9, type: 3}
+  - {fileID: 7823022929340333155, guid: 35b2c1fca2328c141869ae3997dfbcd3, type: 3}
+  - {fileID: 8350013347438611437, guid: 585d211586d25ac4c9f86c4708dfcede, type: 3}
   - {fileID: 6143676443951110968, guid: 2e298e1bafa5d044392270ac883f4984, type: 3}
   - {fileID: 7334127782303329540, guid: ba5ca8ca590dd7f4ca6ed82a8da4e799, type: 3}
 --- !u!4 &820849370

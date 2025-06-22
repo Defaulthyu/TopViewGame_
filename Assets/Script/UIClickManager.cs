@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIClickManager : MonoBehaviour
 {
-    public int goldCost = 100; // 레벨업에 필요한 골드 비용
+    public int goldCost = 50; // 레벨업에 필요한 골드 비용
     public void OpenLevelUpByGold()
     {
 
@@ -18,4 +18,6 @@ public class UIClickManager : MonoBehaviour
             Debug.Log("골드가 부족합니다.");
         }
     }
+
+
 }

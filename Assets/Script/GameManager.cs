@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public float maxHealth = 100;
     public int level;
     public int kill;
-    public int exp;
+    public float exp;
     public int[] nextExp = { 3, 10, 20, 30, 40, 50, 70, 110, 150, 200, 250, 350, 500 };
     [Header("# GameObject")]
     public PoolManager pool;
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void GetExp(int score)
+    public void GetExp(float score)
     {
         exp += score;
 

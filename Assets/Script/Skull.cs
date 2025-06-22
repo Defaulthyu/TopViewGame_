@@ -12,7 +12,7 @@ public class Skull : MonoBehaviour
 
     bool isLive = true;
 
-    int exp;
+    float exp;
 
     Rigidbody2D rb;
     Collider2D coll;
@@ -117,7 +117,7 @@ public class Skull : MonoBehaviour
 
     void Dead()
     {
-        float dropChance = 0.1f; // 50% È®·ü·Î °ñµå µå¶ø
+        float dropChance = 0.05f;
         if(Random.value < dropChance)
         {
             Instantiate(goldPrefab, transform.position, Quaternion.identity);
