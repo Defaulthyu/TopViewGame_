@@ -189,7 +189,6 @@ MonoBehaviour:
   maxHealth: 0
   animCon:
   - {fileID: 9100000, guid: 0c6c551c8affc04479de696fa14b01ea, type: 2}
-  - {fileID: 9100000, guid: a14ec6a4a8fdfa44da30938a13dbd89c, type: 2}
   target: {fileID: 0}
   goldPrefab: {fileID: 6146122969334694186, guid: 09a3f2cb3203a684fb4beb7156ebb0d0, type: 3}
 --- !u!114 &8440420422785204069

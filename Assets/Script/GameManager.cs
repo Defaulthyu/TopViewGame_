@@ -64,9 +64,9 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void GetExp()
+    public void GetExp(int score)
     {
-        exp++;
+        exp += score;
 
         if(exp == nextExp[Mathf.Min(level, nextExp.Length-1)])
         {

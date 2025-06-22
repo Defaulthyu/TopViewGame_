@@ -96,7 +96,7 @@ public class Skull : MonoBehaviour
             sr.sortingOrder = 1;
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
-            GameManager.instance.GetExp();
+            GameManager.instance.GetExp(1);
         }
     }
 

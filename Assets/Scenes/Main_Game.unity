@@ -1021,6 +1021,17 @@ MonoBehaviour:
   spawnPoints: []
   levelSpawnDataList:
   - spawnDatas:
+    - prefabId: 3
+      spawnTime: 0.5
+      spriteType: 0
+      health: 30
+      speed: 1
+    - prefabId: 1
+      spawnTime: 1
+      spriteType: 0
+      health: 50
+      speed: 0.7
+  - spawnDatas:
     - prefabId: 0
       spawnTime: 1
       spriteType: 0
@@ -1028,7 +1039,7 @@ MonoBehaviour:
       speed: 0.3
     - prefabId: 0
       spawnTime: 1.2
-      spriteType: 1
+      spriteType: 0
       health: 60
       speed: 0.2
   - spawnDatas:
@@ -1039,7 +1050,7 @@ MonoBehaviour:
       speed: 1
     - prefabId: 0
       spawnTime: 0.5
-      spriteType: 1
+      spriteType: 0
       health: 100
       speed: 0.7
   - spawnDatas:
@@ -1050,7 +1061,7 @@ MonoBehaviour:
       speed: 1
     - prefabId: 0
       spawnTime: 0.5
-      spriteType: 1
+      spriteType: 0
       health: 200
       speed: 0.7
   - spawnDatas:
@@ -1061,9 +1072,31 @@ MonoBehaviour:
       speed: 0.7
     - prefabId: 2
       spawnTime: 0.5
-      spriteType: 1
+      spriteType: 0
       health: 350
       speed: 0.5
+  - spawnDatas:
+    - prefabId: 2
+      spawnTime: 0.4
+      spriteType: 0
+      health: 500
+      speed: 0.7
+    - prefabId: 2
+      spawnTime: 0.5
+      spriteType: 0
+      health: 350
+      speed: 0.5
+  - spawnDatas:
+    - prefabId: 2
+      spawnTime: 0.5
+      spriteType: 0
+      health: 1000
+      speed: 0.5
+    - prefabId: 2
+      spawnTime: 1
+      spriteType: 0
+      health: 850
+      speed: 0.4
   levelTime: 0
 --- !u!1 &316360140
 GameObject:
@@ -1632,13 +1665,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 1
   gameTime: 0
-  maxGameTime: 180
+  maxGameTime: 300
   health: 0
   maxHealth: 100
   level: 0
   kill: 0
   exp: 0
-  nextExp: 03000000050000000a000000140000001e000000280000003c0000006400000096000000c8000000
+  nextExp: 03000000050000000a0000000a0000000a00000014000000140000001400000032000000320000003200000064000000
   pool: {fileID: 820849369}
   player: {fileID: 2067231350}
   uiLevelUp: {fileID: 1379404677}
@@ -6505,6 +6538,7 @@ MonoBehaviour:
   - {fileID: 4912807745633266085, guid: bf7e76a4c3232944faccb2dcaa36c72f, type: 3}
   - {fileID: 6923867791708691285, guid: 44fa6dcb46c9a484ba17ff45ec5e9532, type: 3}
   - {fileID: 4912807745633266085, guid: 536a722a6623e9f4e8bc394c13d9d9d9, type: 3}
+  - {fileID: 2411872748631596104, guid: e72ef0e4d9dbf2b46aabcd1a1f683a13, type: 3}
   - {fileID: 6143676443951110968, guid: 2e298e1bafa5d044392270ac883f4984, type: 3}
   - {fileID: 7334127782303329540, guid: ba5ca8ca590dd7f4ca6ed82a8da4e799, type: 3}
 --- !u!4 &820849370
