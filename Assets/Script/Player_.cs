@@ -54,6 +54,8 @@ public class Player_ : MonoBehaviour
         if(GameManager.instance.health < 0)
         {
             rb.velocity = Vector2.zero; //플레이어 정지
+            rb.constraints = RigidbodyConstraints2D.FreezeAll; //플레이어 움직임 정지
+
             anim.SetTrigger("Dead");
             GameManager.instance.GameOver(); //게임 오버 처리
         }
