@@ -1019,37 +1019,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints: []
-  spawnData:
-  - prefabId: 0
-    spawnTime: 0.5
-    spriteType: 0
-    health: 50
-    speed: 0.5
-  - prefabId: 0
-    spawnTime: 0.5
-    spriteType: 1
-    health: 50
-    speed: 0.2
-  - prefabId: 0
-    spawnTime: 0.4
-    spriteType: 0
-    health: 70
-    speed: 0.5
-  - prefabId: 0
-    spawnTime: 0.3
-    spriteType: 0
-    health: 100
-    speed: 0.5
-  - prefabId: 2
-    spawnTime: 0.2
-    spriteType: 1
-    health: 200
-    speed: 0.4
-  - prefabId: 2
-    spawnTime: 0.3
-    spriteType: 0
-    health: 300
-    speed: 0.3
+  levelSpawnDataList:
+  - spawnDatas:
+    - prefabId: 0
+      spawnTime: 1
+      spriteType: 0
+      health: 70
+      speed: 0.3
+    - prefabId: 0
+      spawnTime: 1.2
+      spriteType: 1
+      health: 60
+      speed: 0.2
+  - spawnDatas:
+    - prefabId: 0
+      spawnTime: 0.3
+      spriteType: 0
+      health: 150
+      speed: 1
+    - prefabId: 0
+      spawnTime: 0.5
+      spriteType: 1
+      health: 100
+      speed: 0.7
+  - spawnDatas:
+    - prefabId: 0
+      spawnTime: 0.2
+      spriteType: 0
+      health: 300
+      speed: 1
+    - prefabId: 0
+      spawnTime: 0.5
+      spriteType: 1
+      health: 200
+      speed: 0.7
+  - spawnDatas:
+    - prefabId: 2
+      spawnTime: 0.4
+      spriteType: 0
+      health: 500
+      speed: 0.7
+    - prefabId: 2
+      spawnTime: 0.5
+      spriteType: 1
+      health: 350
+      speed: 0.5
   levelTime: 0
 --- !u!1 &316360140
 GameObject:
@@ -1624,7 +1638,7 @@ MonoBehaviour:
   level: 0
   kill: 0
   exp: 0
-  nextExp: 03000000050000000a00000014000000280000003c000000500000006400000096000000c80000002c01000090010000f40100008a02000084030000
+  nextExp: 03000000050000000a000000140000001e000000280000003c0000006400000096000000c8000000
   pool: {fileID: 820849369}
   player: {fileID: 2067231350}
   uiLevelUp: {fileID: 1379404677}

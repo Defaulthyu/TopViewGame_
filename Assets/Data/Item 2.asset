@@ -15,20 +15,20 @@ MonoBehaviour:
   itemType: 2
   itemId: 2
   itemName: "\uC7A5\uAC11"
-  itemDesc: "\uC5F0\uC0AC\uC18D\uB3C4 {0}% \uC99D\uAC00"
+  itemDesc: "\uC5F0\uC0AC / \uD68C\uC804 \uC18D\uB3C4 {0}% \uC99D\uAC00"
   itemIcon: {fileID: 0}
   baseDamage: 0
   baseCount: 0
   damages:
-  - 1
   - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
-  - 0.2
+  - 0.3
+  - 0.3
+  - 0.3
+  - 0.3
+  - 0.3
+  - 0.3
+  - 0.3
+  - 0.3
+  - 0.3
   counts: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   projectile: {fileID: 0}
