@@ -1026,77 +1026,91 @@ MonoBehaviour:
       spriteType: 0
       health: 30
       speed: 1
+      exp: 10
     - prefabId: 1
       spawnTime: 1
       spriteType: 0
       health: 50
       speed: 0.7
+      exp: 10
   - spawnDatas:
     - prefabId: 0
       spawnTime: 1
       spriteType: 0
       health: 70
       speed: 0.3
+      exp: 0
     - prefabId: 0
       spawnTime: 1.2
       spriteType: 0
       health: 60
       speed: 0.2
+      exp: 0
   - spawnDatas:
     - prefabId: 0
       spawnTime: 0.3
       spriteType: 0
       health: 150
       speed: 1
+      exp: 0
     - prefabId: 0
       spawnTime: 0.5
       spriteType: 0
       health: 100
       speed: 0.7
+      exp: 0
   - spawnDatas:
     - prefabId: 0
       spawnTime: 0.2
       spriteType: 0
       health: 300
       speed: 1
+      exp: 0
     - prefabId: 0
       spawnTime: 0.5
       spriteType: 0
       health: 200
       speed: 0.7
+      exp: 0
   - spawnDatas:
     - prefabId: 2
       spawnTime: 0.4
       spriteType: 0
       health: 500
       speed: 0.7
+      exp: 0
     - prefabId: 2
       spawnTime: 0.5
       spriteType: 0
       health: 350
       speed: 0.5
+      exp: 0
   - spawnDatas:
     - prefabId: 2
       spawnTime: 0.4
       spriteType: 0
       health: 500
       speed: 0.7
+      exp: 0
     - prefabId: 2
       spawnTime: 0.5
       spriteType: 0
       health: 350
       speed: 0.5
+      exp: 0
   - spawnDatas:
     - prefabId: 2
       spawnTime: 0.5
       spriteType: 0
       health: 1000
       speed: 0.5
+      exp: 0
     - prefabId: 2
       spawnTime: 1
       spriteType: 0
       health: 850
       speed: 0.4
+      exp: 0
   levelTime: 0
 --- !u!1 &316360140
 GameObject:

@@ -78,4 +78,6 @@ public class SpawnData
     public int spriteType;
     public int health;
     public float speed;
+
+    public int exp;
 }

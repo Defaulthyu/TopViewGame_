@@ -12,6 +12,8 @@ public class Skull : MonoBehaviour
 
     bool isLive = true;
 
+    int exp;
+
     Rigidbody2D rb;
     Collider2D coll;
     Animator anim;
@@ -71,6 +73,8 @@ public class Skull : MonoBehaviour
         speed = data.speed;
         maxHealth = data.health;
         health = data.health;
+        exp = data.exp; // 경험치 설정
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -96,7 +100,7 @@ public class Skull : MonoBehaviour
             sr.sortingOrder = 1;
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
-            GameManager.instance.GetExp(1);
+            GameManager.instance.GetExp(exp);
         }
     }
 
