@@ -1013,7 +1013,7 @@ MonoBehaviour:
   megaBulletPer: 9999999
   megaBulletSpeed: 4
   cost: 200
-  megaShotButton: {fileID: 0}
+  megaShotButton: {fileID: 612160119}
 --- !u!4 &152342856
 Transform:
   m_ObjectHideFlags: 0
