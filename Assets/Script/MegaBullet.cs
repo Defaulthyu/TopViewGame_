@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MegaBullet : MonoBehaviour
 {
@@ -8,11 +9,30 @@ public class MegaBullet : MonoBehaviour
     public float megaBulletSpeed = 8f;
     public int cost = 200;
 
+    public Button megaShotButton; // UI 버튼
+
     Player_ player;
 
     void Start()
     {
         player = GameManager.instance.player;
+        UpdateButton(GoldManager.Instance.currentGold);
+    }
+
+    private void OnEnable()
+    {
+        GoldManager.OnGoldChanged += UpdateButton;
+    }
+
+    private void OnDisable()
+    {
+        GoldManager.OnGoldChanged -= UpdateButton;
+    }
+
+    void UpdateButton(int gold)
+    {
+        if(megaShotButton != null)
+            megaShotButton.interactable = gold >= cost;
     }
 
     // UI 버튼에 연결할 함수

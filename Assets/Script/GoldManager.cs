@@ -32,11 +32,16 @@ public class GoldManager : MonoBehaviour
         }
     }
 
+    public delegate void GoldChangedHandler(int newGold);
+    public static event GoldChangedHandler OnGoldChanged;
+
     public void AddGold(int amount)
     {
         currentGold += amount;
         UpdateGoldUI();
         SaveGoldToJSON();
+
+        OnGoldChanged?.Invoke(currentGold); // 골드 변경 이벤트 호출
     }
 
     void UpdateGoldUI()
