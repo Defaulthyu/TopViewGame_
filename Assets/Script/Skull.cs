@@ -122,7 +122,7 @@ public class Skull : MonoBehaviour
 
     void Dead()
     {
-        float dropChance = 0.05f;
+        float dropChance = 0.1f;
         if(Random.value < dropChance)
         {
             Instantiate(goldPrefab, transform.position, Quaternion.identity);

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class UIClickManager : MonoBehaviour
@@ -17,6 +18,21 @@ public class UIClickManager : MonoBehaviour
         {
             Debug.Log("골드가 부족합니다.");
         }
+    }
+
+    public void StartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Main_Game");
+    }
+
+    public void Title()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Title_Scene");
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 
 

@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
         isLive = false; //게임 정지 상태로 변경
         enemyCleaner.SetActive(true); //적 제거기 활성화
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.4f);
 
         Stop(); //게임 정지
         StatusUI.gameObject.SetActive(false); //상태 UI 비활성화
