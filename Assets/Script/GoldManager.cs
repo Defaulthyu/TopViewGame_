@@ -8,6 +8,7 @@ public class GoldManager : MonoBehaviour
 
     public int currentGold = 0;
     public Text goldText; // UI에 표시될 텍스트 연결
+    public Text goldText2;
     string savePath;
 
     [System.Serializable]
@@ -42,6 +43,8 @@ public class GoldManager : MonoBehaviour
     {
         if (goldText != null)
             goldText.text = $"{currentGold}";
+        if (goldText2 != null)
+            goldText2.text = $"{currentGold}"; // 두 번째 텍스트도 업데이트
     }
 
     void SaveGoldToJSON()
