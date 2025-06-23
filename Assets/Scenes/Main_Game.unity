@@ -1518,19 +1518,19 @@ MonoBehaviour:
       exp: 3
   - spawnDatas:
     - prefabId: 0
-      spawnTime: 0.45
+      spawnTime: 0.5
       spriteType: 0
       health: 250
       speed: 0.5
       exp: 1
     - prefabId: 1
-      spawnTime: 0.5
+      spawnTime: 0.6
       spriteType: 0
       health: 225
       speed: 0.6
       exp: 1
     - prefabId: 2
-      spawnTime: 1.35
+      spawnTime: 1.4
       spriteType: 0
       health: 200
       speed: 0.8
@@ -1555,19 +1555,19 @@ MonoBehaviour:
       exp: 3
   - spawnDatas:
     - prefabId: 0
-      spawnTime: 0.35
+      spawnTime: 0.45
       spriteType: 0
       health: 450
       speed: 0.5
       exp: 1
     - prefabId: 1
-      spawnTime: 0.45
+      spawnTime: 0.55
       spriteType: 0
       health: 350
       speed: 0.8
       exp: 1
     - prefabId: 2
-      spawnTime: 1.1
+      spawnTime: 1.2
       spriteType: 0
       health: 250
       speed: 0.9
@@ -7956,7 +7956,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1050611958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8226,10 +8226,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ad32b59460fd0c4bbe79fa7e1468407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bgmClip: {fileID: 0}
+  bgmClip: {fileID: 8300000, guid: c3741943ef518bd468b05d2b5ba2f454, type: 3}
   bgmVolume: 0.3
-  sfxClips: []
-  sfxVolume: 0.5
+  sfxClips:
+  - {fileID: 8300000, guid: c66f5b868aec91e4d9b995a301604e65, type: 3}
+  - {fileID: 8300000, guid: 6fe8fecd461d3d745808ff6f9830ac79, type: 3}
+  - {fileID: 8300000, guid: 570a6d163f2d9f24c9ba3b5fd20cf92b, type: 3}
+  - {fileID: 8300000, guid: ff1140bb2abb1c54dbd8dbe7801e5af6, type: 3}
+  - {fileID: 8300000, guid: 4db467ee61d2a9e4fa1cbabae357350e, type: 3}
+  - {fileID: 8300000, guid: 1ed3300ad9411cf43a1c797301a0a737, type: 3}
+  - {fileID: 8300000, guid: 48cd6232edd9c5a488e5dcb752d11223, type: 3}
+  - {fileID: 8300000, guid: cd794b4a0fbb60f42aa24818ed4b11f3, type: 3}
+  - {fileID: 8300000, guid: c79010ca104670640bbfa120e5b0bc5c, type: 3}
+  - {fileID: 8300000, guid: 70c552d93f9a74d44a1b6299a32ef6b9, type: 3}
+  sfxVolume: 0.3
   channels: 16
 --- !u!4 &1099604759
 Transform:
@@ -12967,6 +12977,7 @@ GameObject:
   - component: {fileID: 1291228185}
   - component: {fileID: 1291228184}
   - component: {fileID: 1291228187}
+  - component: {fileID: 1291228188}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13082,6 +13093,16 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!165 &1291228188
+AudioHighPassFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291228183}
+  m_Enabled: 0
+  m_CutoffFrequency: 5000
+  m_HighpassResonanceQ: 1
 --- !u!1 &1312983162
 GameObject:
   m_ObjectHideFlags: 0

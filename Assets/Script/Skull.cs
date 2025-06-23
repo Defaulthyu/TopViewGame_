@@ -91,6 +91,7 @@ public class Skull : MonoBehaviour
         if (health > 0)
         {
             anim.SetTrigger("Hit");
+            AudioManager.Instance.PlaySfx(AudioManager.Sfx.Hit); //맞았을 때 사운드 재생
         }
         else
         {
@@ -101,6 +102,10 @@ public class Skull : MonoBehaviour
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
             GameManager.instance.GetExp(exp);
+
+            if(GameManager.instance.isLive)
+                AudioManager.Instance.PlaySfx(AudioManager.Sfx.Dead); //사운드 재생
+
         }
     }
 

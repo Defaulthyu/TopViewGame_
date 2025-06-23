@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
         //임시 스크립트
         uiLevelUp.Select(0);
+        AudioManager.Instance.PlayBgm(true); //배경음악 재생
     }
 
     public void GameOver()
@@ -53,6 +54,7 @@ public class GameManager : MonoBehaviour
         uiResult.gameObject.SetActive(true); //게임 오버 UI 활성화
         uiResult.Lose(); //게임 오버 메시지 표시
 
+        AudioManager.Instance.PlayBgm(false);
         AudioManager.Instance.PlaySfx(AudioManager.Sfx.Lose); //게임 오버 사운드 재생
 
     }
@@ -74,7 +76,8 @@ public class GameManager : MonoBehaviour
         uiResult.gameObject.SetActive(true); //게임 오버 UI 활성화
         uiResult.Win();
 
-        AudioManager.Instance.PlaySfx(AudioManager.Sfx.Win); //게임 오버 사운드 재생
+        AudioManager.Instance.PlayBgm(false);
+        AudioManager.Instance.PlaySfx(AudioManager.Sfx.Win); //게임 승리 사운드 재생
 
     }
 
