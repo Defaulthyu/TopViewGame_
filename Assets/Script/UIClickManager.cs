@@ -25,6 +25,9 @@ public class UIClickManager : MonoBehaviour
     public Button button; // UI 버튼
     public int cost = 50; //비활성화 할 코스트
 
+    public AudioClip clickSound; //클릭 사운드
+    private AudioSource audioSource; //오디오 소스
+
     void Start()
     {
         if(player != null)
@@ -32,6 +35,9 @@ public class UIClickManager : MonoBehaviour
 
         if (GoldManager .Instance != null)
             UpdateButton(GoldManager.Instance.currentGold);
+
+        if (clickSound != null)
+            audioSource = GetComponent<AudioSource>();
     }
 
     private void OnEnable()
@@ -63,6 +69,11 @@ public class UIClickManager : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void OnClick()
+    {
+        audioSource.PlayOneShot(clickSound); // 클릭 사운드 재생
     }
 
 
