@@ -27,8 +27,11 @@ public class UIClickManager : MonoBehaviour
 
     void Start()
     {
-        player = GameManager.instance.player;
-        UpdateButton(GoldManager.Instance.currentGold);
+        if(player != null)
+            player = GameManager.instance.player;
+
+        if (GoldManager .Instance != null)
+            UpdateButton(GoldManager.Instance.currentGold);
     }
 
     private void OnEnable()
