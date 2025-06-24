@@ -7,7 +7,7 @@ public class MegaBullet : MonoBehaviour
     public float megaBulletDamage = 100f;
     public int megaBulletPer = 10;
     public float megaBulletSpeed = 8f;
-    public int cost = 200;
+    public int cost = 100;
 
     public Button megaShotButton; // UI ¹öÆ°
 
