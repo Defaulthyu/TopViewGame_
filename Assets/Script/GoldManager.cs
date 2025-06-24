@@ -7,7 +7,7 @@ public class GoldManager : MonoBehaviour
     public static GoldManager Instance;
 
     public int currentGold = 0;
-    public Text goldText; // UI에 표시될 텍스트 연결
+    Text goldText;
     public Text goldText2;
     string savePath;
 
@@ -19,6 +19,7 @@ public class GoldManager : MonoBehaviour
 
     private void Awake()
     {
+        goldText = GetComponent<Text>();
         if (Instance == null)
         {
             Instance = this;
@@ -31,6 +32,7 @@ public class GoldManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 
     public delegate void GoldChangedHandler(int newGold);
     public static event GoldChangedHandler OnGoldChanged;
@@ -49,7 +51,7 @@ public class GoldManager : MonoBehaviour
         if (goldText != null)
             goldText.text = $"{currentGold}";
         if (goldText2 != null)
-            goldText2.text = $"{currentGold}"; // 두 번째 텍스트도 업데이트
+            goldText2.text = $"{currentGold}";
     }
 
     void SaveGoldToJSON()

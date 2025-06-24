@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
     {
         health = maxHealth;
 
+        Resume(); //게임 시작 시 정지 상태 해제
         //임시 스크립트
         uiLevelUp.Select(0);
         AudioManager.Instance.PlayBgm(true); //배경음악 재생
